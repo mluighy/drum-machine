@@ -60,7 +60,7 @@ return (
     <div id="display">
       <div>Drum machine</div>
       <div>{genre}</div>
-      <button onClick={(e) => greet(e)}>Dedicated to my grandson Lajcsi <i className="bi bi-suit-heart-fill text-danger"></i>
+      <button onClick={(e) => greet(e)}>Dedicated to my grandson<br/>Lajcsi <i className="bi bi-suit-heart-fill text-danger"></i>
           <audio id="greet" src={"https://mluighy.github.io/Product-Landing-Page/lajcsi.mp3"}>
           </audio>
       </button>

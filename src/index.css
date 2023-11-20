@@ -1,5 +1,8 @@
 * {
+  margin:0;
+  padding:0;
   box-sizing: border-box;
+  font: normal 18px 'Grandstander';
 }
 
 body {
@@ -45,7 +48,6 @@ code {
 
 .drum-pad {
   display: block;
-  font-size: 1.5rem;
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -55,13 +57,12 @@ code {
 #display {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: whitesmoke;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border-left: 1px solid rgb(78, 78, 78);
   width: 30%;
-  font-size: 1.2rem;
 }
 
 #display div {
@@ -83,4 +84,5 @@ code {
   margin: 0px 5px 15px 5px;
   border-radius: 15px;
   box-shadow: 0 3px 3px 0;
+  padding-top: 5px;
 }
