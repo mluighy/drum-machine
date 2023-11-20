@@ -34,13 +34,17 @@ function DrumMachine() {
 const [genre, setGenre] = useState('Click on a KEY!')
 const  drum = (e, element) => { 
   setGenre( element.label);
-  document.getElementById(element.key).play().catch(console.error);};
-
+  const b = document.getElementById(element.key);
+  b.currentTime = 0;
+  b.play().catch(console.error);};
+  
 const  greet = (e) => {
   setGenre( <><i className="bi bi-suit-heart-fill text-danger"> </i>
               <i className="bi bi-suit-heart-fill text-danger"> </i>
               <i className="bi bi-suit-heart-fill text-danger"> </i></>);
-  document.getElementById("greet").play().catch(console.error);};
+  const b = document.getElementById("greet");
+  b.currentTime = 1;
+  b.play().catch(console.error);};
 
 useEffect( () => {
 keyBoard.forEach( element => document.addEventListener( 'keydown', (e) => e.key.toUpperCase() === element.key ? drum(e,element) : null ));
