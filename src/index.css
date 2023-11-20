@@ -30,8 +30,8 @@ code {
   display: flex;
   width: 70vw;
   max-width: 550px;
-  height: 40vh;
-  max-height: 300px;
+  height: 55vh;
+  max-height: 350px;
   border-radius: 15px;
   border: 5px solid red;
 }
@@ -85,4 +85,10 @@ code {
   border-radius: 15px;
   box-shadow: 0 3px 3px 0;
   padding-top: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  #display button, #display div:nth-child(2) {
+    font-size: 0.8rem;
+  }
 }
