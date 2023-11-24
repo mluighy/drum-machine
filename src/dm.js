@@ -47,9 +47,13 @@ const  greet = (e) => {
   b.play().catch(console.error);};
 
 useEffect( () => {
-keyBoard.forEach( element => document.addEventListener( 'keydown', (e) => e.key.toUpperCase() === element.key ? drum(e,element) : null ));
-return () => document.removeEventListener('keydown', (e) => drum(e) );
-}, []);
+keyBoard.forEach( element => 
+  { document.addEventListener( 'keydown', (e) => e.key.toUpperCase() === element.key ? drum(e,element) : null );
+    document.getElementById(element.key).load();
+    // console.log(element.key)
+  });
+  return () => document.removeEventListener('keydown', (e) => drum(e) );
+  }, []);
 
 return (
 <div id="outer-box">
